@@ -35,6 +35,12 @@ const prodConfig = merge(common, {
 				loader: "ts-loader",
 			},
 			{
+				enforce: "pre",
+				test: /\.js$/,
+				exclude: /node_modules/,
+				loader: "eslint-loader",
+			},
+			{
 				test: /\.js$/,
 				include: path.join(__dirname, "src"),
 				exclude(path) {

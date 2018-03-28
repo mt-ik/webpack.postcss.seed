@@ -1,4 +1,5 @@
 module.exports = {
+	"root": true, // 停止在父级寻找
 	// 指定环境
 	"env": {
 		"browser": true,
@@ -41,9 +42,9 @@ module.exports = {
 	// },
 	// 设置规则
 	"rules": {
-		"no-global-assign": ["error", {"exceptions": [{
-			"var1": true
-		}]}],
+		// "no-global-assign": ["error", {"exceptions": [{
+		// 	"var1": true
+		// }]}],
 		"no-redeclare": ["error", { "builtinGlobals": true }],
 		"no-shadow": ["error", { "builtinGlobals": false, "hoist": "functions", "allow": [] }],
 		"indent": ["error", "tab"],
@@ -58,5 +59,10 @@ module.exports = {
 		//         "trailingComma": "es5"
 		//     }
 		// ]
+		"no-console": "off",
+		"no-debugger": "off"
 	},
+	"settings": {
+        "sharedData": "Hello"
+    }
 };
