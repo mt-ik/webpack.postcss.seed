@@ -1,0 +1,14 @@
+:root {
+	--bgColor: cornsilk;
+	--fontSize: 25px;
+}
+
+body {
+	font-size: var(--fontSize);
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+	background: var(--bgColor);
+	background-image: url("./shaosiming.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+}

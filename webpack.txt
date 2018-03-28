@@ -1,0 +1,7 @@
+1. dotenv: 允许你通过.env文件定义环境变量。dotenv允许您快速控制设置的主机和端口设置。
+2. devServer.historyApiFallback: 如果您使用的是基于HTML5 History API的路由，请启用。
+3. 如果你想要更好的输出，可以考虑error-overlay-webpack-plugin，因为它更好地显示了错误的来源。
+4. 鉴于HMR实施起来可能很复杂，一个很好的折中办法是将应用程序状态存储到应用程序状态localStorage，然后基于刷新后的应用程序进行水合。这样做会将问题推到应用程序端。
+5. --env : https://survivejs.com/webpack/developing/composing-configuration/
+6. 测试: https://survivejs.com/webpack/techniques/testing/
+7. cdn使用: html-webpack-cdn-plugin
