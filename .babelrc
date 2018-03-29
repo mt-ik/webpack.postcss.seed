@@ -1,16 +1,11 @@
 {
-  "presets": [
-    {
-        "env": {
-            "karma": {
-                "plugins": [
-                    [
-                        "istanbul",
-                        { "exclude": ["tests/*.test.js"] }
-                    ]
-                ]
+    "presets": [
+        ["env",{
+            "targets": {
+                "node": 8,
+                "chrome": 65,
+                "browsers": ["last 2 versions","safari 11"]
             }
-        },
-        "modules": false,
-    }
-]
+        }],
+    ]
+}

@@ -5,3 +5,40 @@
 5. --env : https://survivejs.com/webpack/developing/composing-configuration/
 6. 测试: https://survivejs.com/webpack/techniques/testing/
 7. cdn使用: html-webpack-cdn-plugin
+
+
+1. babel-plugin-istanbul
+2. babel-minify-webpack-plugin || webpack-closure-compiler // 可替换的压缩插件
+3. nsp 安全测试。eslint-plugin-security 
+4. dont-break 回归测试, 适用于API测试
+5. nodemon
+6. phantomjs
+7. prepack-webpack-plugin 适用于webpack2.x或webpack3.x
+8. regenerator-runtime
+9. resolve-url-loader 配合sass使用
+10. webpack-dashboard
+11. stryker 突变测试
+12. pkg-ok 包测试
+13. k6性能测试。k6, Benchmark.js and matcha 
+14. size-limit 大小限制
+15. babel-plugin-contracts
+16. 复杂性分析: iroh, complexity-report, plato, jscomplex
+17. istanbul 代码覆盖率。babel-plugin-istanbul适用于babel
+18. 覆盖率: Codecov, Coveralls
+19. Travis CI, mrm
+20. commitizen提交消息约定
+21. // "lint-staged": {
+  //   "*.js": [
+  //     "eslint --fix",
+  //     "jest --bail --findRelatedTests",
+  //     "prettier --write",
+  //     "git add"
+  //   ],
+  //   "*.scss": [
+  //     "stylelint --fix",
+  //     "prettier --write",
+  //     "git add"
+  //   ]
+  // },
+
+      // "precommit": "lint-staged",
