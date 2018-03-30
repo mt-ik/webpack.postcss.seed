@@ -10,10 +10,12 @@
     }
   ],
   "scripts": {
-    "default": "webpack-dev-server --open",
-    "start": "webpack-dev-server --env --open --config ./webpack/webpack.dev.js",
-    "dev": "nodemon --watch ./webpack/webpack.dev.js --exec \"webpack-dev-server --env --display-used-exports --config ./webpack/webpack.dev.js\"",
-    "build": "webpack --env --config ./webpack/webpack.prod.js",
+    "test:start": "webpack-dev-server --env development ./webpack/webpack.test.js",
+    "test:dev": "nodemon --watch ./webpack/webpack.test.js --exec \"webpack-dev-server --env development --config ./webpack/webpack.test.js\"",
+    "test:build": "webpack --env production --config ./webpack/webpack.test.js",
+    "start": "webpack-dev-server --env development ./webpack/webpack.common.js",
+    "dev": "nodemon --watch ./webpack/webpack.common.js --exec \"webpack-dev-server --env development --config ./webpack/webpack.common.js\"",
+    "build": "webpack --env production --config ./webpack/webpack.common.js",
     "watch": "webpack --watch",
     "dash": "webpack-dashboard --node ./src/index.js",
     "stats": "webpack --env --config ./webpack/webpack.prod.js --display-reasons --profile --progress --json > stats.json",
@@ -106,13 +108,14 @@
     "webpack-dev-server": "^3.1.1",
     "webpack-manifest-plugin": "^2.0.0-rc.2",
     "webpack-merge": "^4.1.2",
+    "webpack-sources": "^1.1.0",
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
     "lodash": "^4.17.5",
     "purecss": "^1.0.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
   },
   "browserslistrc": [
     "defaults",

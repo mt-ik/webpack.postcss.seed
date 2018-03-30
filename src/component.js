@@ -1,9 +1,19 @@
-export default (text = "Hello Xugy") => {
-	const element = document.createElement("div");
+import "!demo-loader?name=foo!./main.css";
+console.log(HELLO, '------------------');
+export default (text = HELLO) => {
+  const element = document.createElement("div");
 
-	element.className = "pure-button";
+  element.className = "pure-button";
+  element.innerHTML = text;
+  element.onclick = () => {
+    import("./lazy")
+      .then(lazy => {
+        element.textContent = lazy.default;
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
 
-	element.innerHTML = text;
-
-	return element;
+  return element;
 };

@@ -1,14 +1,11 @@
-:root {
-	--bgColor: cornsilk;
-	--fontSize: 25px;
+body {
+    background: cornsilk;
+    background-image: url("./logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-body {
-	font-size: var(--fontSize);
-	-webkit-border-radius: 1em;
-	border-radius: 1em;
-	background: var(--bgColor);
-	background-image: url("./shaosiming.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
+.pure-button {
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
 }
